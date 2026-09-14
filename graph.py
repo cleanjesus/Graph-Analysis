@@ -5,6 +5,18 @@ Usage:
     python3 graph.py erdos N C SEED OUTPUT.gml
     python3 graph.py read GRAPH.gml SOURCE
     python3 graph.py display GRAPH.gml OUTPUT.png
+
+---------------------------------------------------------------------------
+Generative AI Disclosure (Syllabus Section 16)
+---------------------------------------------------------------------------
+The following generative AI tools were used in this assignment:
+    Cursor IDE agent (Composer)
+
+Usage of AI:
+    - Used AI to brainstorm structure, map lecture definitions to required
+      output fields.
+    - Verified behavior with tester_graph.py and the README workflow.
+---------------------------------------------------------------------------
 """
 
 import math
@@ -110,7 +122,6 @@ def cmd_read(args):
     G = load_graph(args[0])
     source = args[1]
 
-    # GML labels are usually strings; try the raw argument, then int.
     if source not in G:
         resolved = None
         try:
